@@ -13,8 +13,9 @@
 
 
     function getHumanChoice() {
-        prompt("Choose! Rock, Paper or Scissors!");
-    }   
+        let humanAnswer = prompt("Choose: Rock, Paper or Scissors?");
+        return humanAnswer;
+    }
 
     function getComputerChoice() {
 
@@ -28,10 +29,19 @@
         } else {
             choice = "Scissors";
         }
-    return choice
+        return choice
+    }
+    
+    function playGame() {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+
+        console.log("You chose: " + humanChoice);
+        console.log("The computer chose: ") + computerChoice;
+
+        
     }
 
-    console.log(getComputerChoice);
 
 </script>   
 
