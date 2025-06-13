@@ -39,14 +39,20 @@
         console.log("You chose: " + humanChoice);
         console.log("The computer chose: " + computerChoice);
 
-        if (humanChoice === "Rock" && computerChoice === "Paper") {
+        if (humanChoice === computerChoice) {
+            console.log("It's a draw")
+        } else if (
+            (humanChoice === "Rock" && computerChoice === "Paper") ||
+            (humanChoice === "Paper" && computerChoice === "Scissors") ||
+            (humanChoice === "Scissors" && computerChoice === "Rock") 
+        ) {
             console.log("The computer wins!")
-        } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-            console.log("You win!")
         } else {
-            console.log("It's a draw.")
+            console.log("You win!")
         }
     }
+    
+
 
 </script>   
 
