@@ -37,11 +37,16 @@
         let computerChoice = getComputerChoice();
 
         console.log("You chose: " + humanChoice);
-        console.log("The computer chose: ") + computerChoice;
+        console.log("The computer chose: " + computerChoice);
 
-        
+        if (humanChoice === "Rock" && computerChoice === "Paper") {
+            console.log("The computer wins!")
+        } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+            console.log("You win!")
+        } else {
+            console.log("It's a draw.")
+        }
     }
-
 
 </script>   
 
