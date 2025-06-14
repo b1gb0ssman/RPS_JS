@@ -10,19 +10,20 @@
     
 <script>
 
-
+    
 
     function getHumanChoice() {
         let humanText = prompt("Choose: Rock, Paper or Scissors?");
         let humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
 
         while (humanAnswer !== "Rock" && humanAnswer !== "Paper" && humanAnswer !== "Scissors") {
-            humanText = prompt("That is not a valid argument! Choose: Rock, Paper or Scissors?");
+            humanText = prompt(`${humanAnswer} is not a valid argument! Choose: Rock, Paper or Scissors?`);
             humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
         } 
 
         return humanAnswer;
     }
+
 
     function getComputerChoice() {
 
@@ -79,10 +80,24 @@
             console.log("Tie - play again!")
         }
         
-        console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
+        return result
     }
 
+    
+    function playGame() {
 
+        while (humanScore < 5 && computerScore < 5) {
+        console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
+        overallScore();
+        }
+
+        if (humanScore === 5) {
+            alert("You win the game!");
+        } else {
+            alert("The computer wins the game!");
+        }
+    }
+    
 
 
 </script>   
