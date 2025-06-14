@@ -14,10 +14,11 @@
 
     function getHumanChoice() {
         let humanText = prompt("Choose: Rock, Paper or Scissors?");
-        humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
+        let humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
 
-        if (humanAnswer != "Rock" || "Paper" || "Scissors") {
-            console.log("That is not a valid argument")
+        while (humanAnswer !== "Rock" && humanAnswer !== "Paper" && humanAnswer !== "Scissors") {
+            humanText = prompt("That is not a valid argument! Choose: Rock, Paper or Scissors?");
+            humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
         } 
 
         return humanAnswer;
