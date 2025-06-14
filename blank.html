@@ -13,7 +13,13 @@
 
 
     function getHumanChoice() {
-        let humanAnswer = prompt("Choose: Rock, Paper or Scissors?");
+        let humanText = prompt("Choose: Rock, Paper or Scissors?");
+        humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
+
+        if (humanAnswer != "Rock" || "Paper" || "Scissors") {
+            console.log("That is not a valid argument")
+        } 
+
         return humanAnswer;
     }
 
@@ -32,26 +38,50 @@
         return choice
     }
     
-    function playGame() {
+    function gameDecision() {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
 
         console.log("You chose: " + humanChoice);
         console.log("The computer chose: " + computerChoice);
 
+        let decision;
+
         if (humanChoice === computerChoice) {
-            console.log("It's a draw")
+            decision = ("It's a draw");
         } else if (
             (humanChoice === "Rock" && computerChoice === "Paper") ||
             (humanChoice === "Paper" && computerChoice === "Scissors") ||
             (humanChoice === "Scissors" && computerChoice === "Rock") 
         ) {
-            console.log("The computer wins!")
+            decision = ("The computer wins!");
         } else {
-            console.log("You win!")
+            decision = ("You win!");
         }
+        return decision;
     }
-    
+
+
+    let humanScore = 0;
+    let computerScore = 0;
+
+
+    function overallScore() {
+
+        let result = gameDecision();
+
+        if (result === "The computer wins!") {
+            computerScore++;
+        } else if (result === "You win!") {
+            humanScore++;
+        } else {
+            console.log("Tie - play again!")
+        }
+        
+        console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
+    }
+
+
 
 
 </script>   
