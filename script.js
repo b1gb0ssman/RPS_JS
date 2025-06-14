@@ -1,3 +1,6 @@
+    
+    // this function takes the user response and formats it. If an incorrect answer is given, loop back
+    
     function getHumanChoice() {
         let humanText = prompt("Choose: Rock, Paper or Scissors?");
         let humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
@@ -9,6 +12,8 @@
 
         return humanAnswer;
     }
+
+    // this function creates a random number between 1-3 and assigns a string to each
 
     function getComputerChoice() {
 
@@ -26,6 +31,9 @@
         return choice
     }
     
+    // this function takes the results from the above two functions, and outputs what both the user and computer has chosen
+    // it then makes a decision based on the game rules, and outputs who the winner is
+
     function gameDecision() {
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
@@ -50,10 +58,14 @@
         return decision;
     }
 
+    // these variables are to be used in the function below, placed in the global stack
 
     let humanScore = 0;
     let computerScore = 0;
 
+
+    // this function takes the result from the above function, and provides a result based on it
+    // depending on the result, the 'score' is then incremented using the above 2 variables
 
     function scoreCounter() {
 
@@ -70,7 +82,10 @@
         return result
     }
 
-    
+    // the function that takes all of the above and loops it, mimicking rounds
+    // it also provides the ending through the if statement
+
+
     function playGame() {
 
         while (humanScore < 5 && computerScore < 5) {
