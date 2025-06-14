@@ -10,8 +10,6 @@
     
 <script>
 
-    
-
     function getHumanChoice() {
         let humanText = prompt("Choose: Rock, Paper or Scissors?");
         let humanAnswer = humanText.charAt(0).toUpperCase() + humanText.slice(1).toLowerCase();
@@ -23,7 +21,6 @@
 
         return humanAnswer;
     }
-
 
     function getComputerChoice() {
 
@@ -37,6 +34,7 @@
         } else {
             choice = "Scissors";
         }
+
         return choice
     }
     
@@ -68,7 +66,7 @@
     let computerScore = 0;
 
 
-    function overallScore() {
+    function scoreCounter() {
 
         let result = gameDecision();
 
@@ -88,7 +86,7 @@
 
         while (humanScore < 5 && computerScore < 5) {
         console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
-        overallScore();
+        scoreCounter();
         }
 
         if (humanScore === 5) {
