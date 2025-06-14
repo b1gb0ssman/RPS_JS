@@ -1,0 +1,14 @@
+h1,
+h2 {
+    color: #0067ac;
+    text-align: center;
+    text-shadow: black 1px 1px 1px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
