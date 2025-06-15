@@ -13,6 +13,7 @@ For the GUI, I'd like to add:
     - A button that starts the game
     - A visual score counter
     - Celebratory effects
+    - More stylistic elements for the prompts/alerts
 
 For the functionality: 
 
